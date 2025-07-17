@@ -75,12 +75,10 @@
     "zustand": "^5.0.6"
   },
   "devDependencies": {
-  "@next/bundle-analyzer": "^15.4.1",
-  "@types/react": "18.2.37",
-  "@types/react-dom": "18.2.17",
-  "@types/react-day-picker": "^5.2.1",
-  "@types/react-window": "^1.8.8",
-  "@types/recharts": "^1.8.29"
-}
-
+    "@next/bundle-analyzer": "^15.4.1",
+    "@types/react": "^17.0.87",
+    "@types/react-dom": "18.2.17",
+    "@types/react-window": "^1.8.8",
+    "@types/recharts": "^1.8.29"
+  }
 }

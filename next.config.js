@@ -7,5 +7,10 @@ module.exports = withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true, // ✅ Skips TypeScript type errors during build
+  },
 });

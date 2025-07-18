@@ -20,6 +20,8 @@ const names = [
   'Tyler Scott', 'Melissa Adams', 'Andrew Phillips', 'Lauren Harris'
 ];
 
+const avatars:any = [];
+
 const milestoneTemplates = [
   { title: 'Completed First Module', weight: 10 },
   { title: 'Mastered Basic Concepts', weight: 25 },
@@ -67,12 +69,12 @@ export function generateMockStudents(count: number = 50): Student[] {
     const questionsCompleted = Math.floor(Math.random() * questionsAssigned);
     const courseProgress = Math.floor(Math.random() * 100);
     const accuracy = Math.floor(Math.random() * 40) + 60;
-    
+
     return {
       id: `student-${index + 1}`,
       name: names[index % names.length],
-      email: `${names[index % names.length].toLowerCase().replace(' ', '.')}@example.com`,
-      avatar: `https://images.unsplash.com/photo-${1500000000000 + index}?w=64&h=64&fit=crop&crop=face`,
+      email: `${names[index % names.length].toLowerCase().replace(/\s+/g, '.')}@example.com`,
+      avatar: avatars[index % avatars.length],
       course: courses[Math.floor(Math.random() * courses.length)],
       enrollmentDate: subDays(new Date(), Math.floor(Math.random() * 180)),
       tasksAssigned,
